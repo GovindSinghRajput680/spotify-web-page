@@ -1,0 +1,297 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;/*whatever the content that will not fit we will hide that*/
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+.sidebar{
+    background-color: rgb(0, 0, 0);
+    width: 340px;
+    border-radius: 1rem;/*by default it is 16px*/
+    margin-right: 0.5rem;
+
+}
+.main_content{
+    background-color: #121212;
+    flex: 1;/*whatever the space left after fillling all give me*/
+    border-radius: 1rem;/*by default it is 16px*/
+    overflow: auto;/*whenever we will need a scroll bar in this then we will get that*/
+    padding: 0 1.5rem 0 1.5rem;
+}
+.music_player{
+    background-color:black;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.nav{
+    background-color: #121212;
+    border-radius: 1rem;/*by default it is 16px*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+  
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav-option{
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+.nav-option i{
+    font-size: 1.25rem;
+}
+.nav-option a{
+    font-size: 1.25rem;
+    margin-left: 1rem;
+}
+.library{
+    background-color: #121212;
+    border-radius: 1rem;/*by default it is 16px*/
+    margin-top: 0.5rem;
+    height: 100%;
+
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lib-options img{
+    height: 1.25rem;
+    width: 1.25rem;
+}
+.icons{
+    font-size: 1rem;
+    display: flex;
+}
+
+.icons i{
+    opacity: 0.7;
+    margin-right: 1.25rem;
+}
+
+.icons i:hover{
+    opacity: 1;
+}
+
+.box{
+    background-color: hsl(0, 0%, 14%,0.6);
+    height: 8rem;
+    border-radius: 0.7rem;
+    margin: 0.5rem 0.5rem 1.75rem 0.5rem;
+    padding: 0.75rem 1rem;
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.box-p2{
+    font-size: 0.85rem;
+}
+.badge{
+    border: none;
+    background-color: #fff;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+   
+    background-color: #121212;
+}
+.sticky-nav-icons{
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    margin-right: 1rem;
+}
+.sticky-nav-user-icon{
+    transform: scale(1.5);
+}
+.dark-badge{
+    background-color: black;
+    color: white;
+}
+@media (max-width:1000px){
+    .hide{
+        display: none;
+    }
+}
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+  
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size:0.85rem;
+}
+.footer{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+.line{
+    width: 95%;
+    height: 30%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+
+.player{
+    width: 50%;
+    height: 100%;
+    
+}
+.controls{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.player-control-icon{
+    height: 1rem; 
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+.player-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    background-color: #1bd760;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+.album{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4px;
+    
+}
+.album-pic{
+    margin: 0.25rem;
+    margin-left: 0.5rem;
+}
+.album-text p{
+    line-height: 0.5rem;
+    
+   
+}
+.album-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8px;
+}
+.album-icon img{
+    margin-right: 5px;
+    
+}
+.album-icon img{
+    height: 1.5rem; 
+}
+.controls img{
+    height: 2.5rem;
+    opacity: 0.7;
+}
+input[type="range"].volume{
+    width: 45%;
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+}
+input[type="range"].volume::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+    appearance: none;
+}
+input[type="range"].volume::-webkit-slider-thumb{
+    appearance: none;
+}
